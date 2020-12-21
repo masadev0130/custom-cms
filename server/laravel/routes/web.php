@@ -19,4 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/admin', function() {
+    return 'you are an admin or editor or author';
+})->middleware('admin');
+
 Route::get('/home', 'HomeController@index')->name('home');
